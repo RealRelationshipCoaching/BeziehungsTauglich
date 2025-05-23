@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeziehungsTauglich – Andreas Guger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffdfc;
+      color: #2e2e2e;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+    header {
+      background: linear-gradient(120deg, #e6f0ff, #e9f7ef);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      color: #244a73;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #375468;
+      text-align: center;
+    }
+    .info {
+      background-color: #d0e7ff;
+      text-align: center;
+      padding: 1.2rem;
+      font-weight: 600;
+      color: #244a73;
+    }
+    .info strong {
+      font-weight: 700;
+      color: #1b3d66;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+    section {
+      margin-bottom: 3.5rem;
+    }
+    section + section {
+      margin-top: 4rem;
+    }
+    h2 {
+      color: #244a73;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #4d88c6;
+      padding-left: 1rem;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+    .quote-author {
+      text-align: right;
+      font-style: italic;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.75rem;
+    }
+    .cta {
+      background: #e1f3ea;
+      padding: 2.5rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #244a73;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    .ablauf {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .ablauf-box {
+      background: #f2f8ff;
+      border-left: 6px solid #4d88c6;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .vergleich {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .vergleich-box {
+      flex: 1;
+      background: #f5f7fa;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .leistungen {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .leistung-box {
+      flex: 1 1 250px;
+      background: #f2f6f9;
+      border-left: 5px solid #4d88c6;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .leistung-box.disabled {
+      opacity: 0.5;
+      background: #e8e8e8;
+      border-left-color: #999;
+      pointer-events: none;
+    }
+    footer {
+      background: #dce7f1;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #1e3a5f;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BeziehungsTauglich</h1>
+    <p>Coaching mit Herz, Verstand und Wirkung – aktuell kostenfrei</p>
+  </header>
+  <div class="info">
+    Andreas Guger | Coaching in Ausbildung | <strong>Kostenfreie Übungssessions</strong> für deine Entwicklung
+  </div>
+  <main>
+    <section>
+      <h2>Über mich</h2>
+<img src="me.jpg" alt="Andreas Guger" style="max-width: 225px; border-radius: 10px; float: right; margin-left: 20px; margin-bottom: 10px; filter: grayscale(100%);">
+<p>Ich bin Andreas Guger – Coach in Ausbildung, Führungskraft mit über 15 Jahren Erfahrung, technikaffiner Denker und beziehungsorientierter Mensch. Meine berufliche Laufbahn begann in der IT – einem Feld, das mir Klarheit, Struktur und analytisches Denken beigebracht hat. Zwei abgeschlossene Studiengänge – Business and Engineering sowie Unternehmensführung – haben mein Verständnis für Systeme, Wirtschaft und Verantwortung geschärft.</p>
+      <p>Doch mit wachsender Verantwortung wurde mir immer klarer: Technik allein reicht nicht aus. Führung gelingt nicht über Zahlen, sondern über Menschen. Über Verbindung. Diese Erkenntnis hat mich dazu bewegt, meinen Fokus zu erweitern. Ich begann Aus- und Weiterbildungen im Bereich Kommunikation, systemisches Coaching, emotionale Intelligenz und Persönlichkeitsentwicklung.</p>
+      <p>Heute begleite ich Menschen, die etwas verändern wollen – in ihrer Beziehung, ihrer Haltung oder ihrem Leben. Ich arbeite mit Struktur, Empathie und methodischer Vielfalt. Für mich ist Coaching kein Beruf, sondern eine Haltung: offen, neugierig, ehrlich und tiefgehend.</p>
+    </section>
+
+    <section>
+      <h2>Was dich erwartet</h2>
+      <p><em>„Zwischen Reiz und Reaktion liegt ein Raum. In diesem Raum liegt unsere Macht zur Wahl unserer Reaktion. In unserer Reaktion liegen unsere Entwicklung und unsere Freiheit.“</em></p>
+      <div class="quote-author">– Viktor E. Frankl</div>
+      <ul>
+        <li><strong>Ein geschützter Raum:</strong> Hier darf alles da sein. Du wirst gehört, gesehen und respektiert.</li>
+        <li><strong>Reflexion mit Tiefe:</strong> Gemeinsam beleuchten wir deine Gedanken, Gefühle und Muster.</li>
+        <li><strong>Impulse zur Veränderung:</strong> Ich arbeite mit systemischen Methoden, Fragetechniken, Perspektivwechseln.</li>
+        <li><strong>Verbindung mit dir selbst:</strong> Wer du bist, was dich bewegt – und was du wirklich willst.</li>
+        <li><strong>Vertraulichkeit & Authentizität:</strong> Coaching ist für mich ein ehrlicher, respektvoller Prozess auf Augenhöhe.</li>
+      </ul>
+      <p>Du bringst dein Thema – ich begleite den Weg. Mit Herz, Klarheit und Vertrauen.</p>
+    </section>
+
+    <section>
+      <h2>Coaching-Ablauf</h2>
+      <p>Jeder Coachingprozess ist einzigartig – so wie du. Gleichzeitig folgt er einer Struktur, die dir Halt gibt und den Raum für persönliche Entwicklung schafft. Schritt für Schritt – in deinem Tempo.</p>
+      <div class="ablauf">
+        <div class="ablauf-box">
+          <strong>1. Kennenlernen</strong><br>
+          Kostenloses Erstgespräch (30 Minuten), in dem wir klären, ob Coaching für dich passt.
+        </div>
+        <div class="ablauf-box">
+          <strong>2. Zielklärung</strong><br>
+          Wir definieren gemeinsam dein Anliegen und die gewünschte Richtung.
+        </div>
+        <div class="ablauf-box">
+          <strong>3. Coachingprozess</strong><br>
+          Sitzungen mit Impulsen, Reflexion und Methodenvielfalt – du bestimmst Tiefe und Tempo.
+        </div>
+        <div class="ablauf-box">
+          <strong>4. Integration</strong><br>
+          Ergebnisse verankern – für langfristige Veränderung und Umsetzung.
+        </div>
+      </div>
+      <p>Coaching ist kein Ziel – sondern eine bewusste Reise zu mehr Klarheit, innerer Freiheit und erfüllten Beziehungen.</p>
+    </section>
+
+    <section>
+      <h2>Für wen Coaching geeignet ist</h2>
+      <p>Coaching ist ein kraftvolles Werkzeug – für alle, die bereit sind, ehrlich hinzusehen und neue Wege zu entdecken.</p>
+      <div class="vergleich">
+        <div class="vergleich-box">
+          <strong>Geeignet für dich, wenn...</strong>
+          <ul>
+            <li>du festgefahrene Beziehungsmuster erkennen und verändern willst</li>
+            <li>du mehr Verbindung zu dir selbst und anderen suchst</li>
+            <li>du an einem Wendepunkt stehst und Orientierung brauchst</li>
+            <li>du dir Klarheit über Werte und Ziele wünschst</li>
+            <li>du innere Entwicklung suchst, nicht nur äußere Lösungen</li>
+          </ul>
+        </div>
+        <div class="vergleich-box">
+          <strong>Aktuell nicht geeignet, wenn...</strong>
+          <ul>
+            <li>du schnelle Antworten statt tiefer Reflexion erwartest</li>
+            <li>du dich in einer akuten psychischen Krise befindest</li>
+            <li>du keine Veränderung möchtest, sondern nur Bestätigung</li>
+            <li>du nicht bereit bist, Verantwortung für dein Erleben zu übernehmen</li>
+          </ul>
+        </div>
+      </div>
+      <p><strong>Fazit:</strong> Coaching wirkt dort, wo du bereit bist, dich selbst wirklich kennenzulernen. Ich begleite dich dabei – achtsam und klar.</p>
+    </section>
+
+    <section>
+      <h2>Angebotene Leistungen</h2>
+      <div class="leistungen">
+        <div class="leistung-box">
+          <h3>Einzelcoaching</h3>
+          <p>Für deine persönliche Weiterentwicklung, emotionale Klarheit und Selbstführung. Du bringst dein Thema – ich begleite den Prozess.</p>
+        </div>
+        <div class="leistung-box disabled">
+          <h3>Paarcoaching (in Vorbereitung)</h3>
+          <p>Demnächst verfügbar: Für Paare, die ihre Verbindung stärken, Muster durchbrechen und Kommunikation vertiefen möchten.</p>
+        </div>
+        <div class="leistung-box">
+          <h3>Online-Coaching</h3>
+          <p>Flexibel und ortsunabhängig: Professionelle Begleitung via Zoom oder MS Teams – von überall aus möglich.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Jetzt kostenfreies Erstgespräch buchen</h2>
+      <p>Ich freue mich darauf, dich kennenzulernen und gemeinsam mit dir zu erkunden, wohin dein Weg führen darf.</p>
+      <a href="mailto:BeziehungsTauglich@outlook.at">Kontakt aufnehmen</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andreas Guger – BeziehungsTauglich | 
+      <a href="#" onclick="document.getElementById('impressumModal').style.display='block'">Impressum</a> | 
+      <a href="#" onclick="document.getElementById('datenschutzModal').style.display='block'">Datenschutz</a></p>
+  </footer>
+
+  <div id="impressumModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('impressumModal').style.display='none'">&times;</span>
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 25 Mediengesetz</p>
+      <p><b>Medieninhaber und verantwortlich für den Inhalt:</b></p>
+      <p style="margin-left: 20px;">Ing. Andreas Guger, MSc, MBA<br>BeziehungsTauglich<br>Kontakt: <a href="mailto:BeziehungsTauglich@outlook.at">BeziehungsTauglich@outlook.at</a></p>
+    </div>
+  </div>
+
+  <div id="datenschutzModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('datenschutzModal').style.display='none'">&times;</span>
+      <h2>Datenschutz</h2>
+      <p>Deine Daten werden vertraulich behandelt und ausschließlich zur Bearbeitung deiner Anfrage verwendet. Es erfolgt keine Weitergabe an Dritte.</p>
+      <p>Mit dem Absenden einer Nachricht erklärst du dich mit der Verarbeitung deiner Daten gemäß DSGVO einverstanden.</p>
+    </div>
+  </div>
+</body>
+</html>
